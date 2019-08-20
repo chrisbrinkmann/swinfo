@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Star Jedi Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Star Jedi Regular'), url('Starjedi.woff') format('woff');
+}
+
+h1 {
+    font-family: "Star Jedi Regular";
+    color: yellow;
+    line-height: 0.1em;
+    display: inline-block;
+}
+
+header {
+    display:flex;
+    height: 30vh;
+    align-items:center;
+    justify-content: center;
+}
