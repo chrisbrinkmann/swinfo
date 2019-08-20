@@ -9,12 +9,12 @@ const Main = ({ displayCategory, displayItem }) => {
     return (
         <main className="container">
             <div className="row">
-                <div className="col-sm-6">
+                <div className="col-md-6">
                     <SelectList
                         category={displayCategory}
                     />
                 </div>
-                <div className="col-sm-6">
+                <div className="col-md-6">
                     <InfoCard
                         subject={displayItem}
                     />

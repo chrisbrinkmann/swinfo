@@ -6,3 +6,13 @@
     border-color: turquoise;
     background: transparent;
 }
+
+.navButton:hover{
+    background: turquoise;
+    border-color:yellow;
+    color:yellow;
+}
+
+.navButton:focus{
+    outline:0;
+}

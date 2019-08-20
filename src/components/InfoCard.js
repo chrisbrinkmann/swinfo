@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/InfoCard.css'
 
 const InfoCard = ({ subject }) => {
 

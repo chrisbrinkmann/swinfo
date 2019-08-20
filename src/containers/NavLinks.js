@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../components/Button'
-import './NavLinks.css'
+import '../styles/NavLinks.css'
 
 const NavLinks = ( { catSelect }) => {
     return (

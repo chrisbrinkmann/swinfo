@@ -1,6 +1,6 @@
 import React from 'react';
 import NavLinks from './NavLinks'
-import './Header.css'
+import '../styles/Header.css'
 
 const Header = ({ catSelect }) => {
     return (
