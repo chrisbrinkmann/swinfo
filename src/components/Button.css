@@ -1,0 +1,8 @@
+.navButton {
+    margin: 0.5em;
+    border-radius: 100px;
+    padding: 0.3em 1em;
+    color: turquoise;
+    border-color: turquoise;
+    background: transparent;
+}
