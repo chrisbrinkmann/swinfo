@@ -18,7 +18,9 @@ class App extends Component {
 
     }
 
-
+    onCategorySelect = event => {
+        this.setState({ categorySelect: event.target.value });
+    }
 
     async componentDidMount() {
         const resp = await fetch("https://swapi.co/api/people/1/")
