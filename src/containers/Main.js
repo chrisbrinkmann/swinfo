@@ -7,8 +7,8 @@ import InfoCard from '../components/InfoCard';
 // we can just destructure props in the arg like this:
 const Main = ({ displayCategory, displayItem }) => {
     return (
-        <main className="container-fluid">
-            <div className="row">
+        <main className="container-fluid row">
+           
                 <div className="col-md-6">
                     <SelectList
                         category={displayCategory}
@@ -19,7 +19,7 @@ const Main = ({ displayCategory, displayItem }) => {
                         subject={displayItem}
                     />
                 </div>
-            </div>
+            
         </main>
     )
 }

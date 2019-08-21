@@ -8,9 +8,7 @@
 }
 
 .navButton:hover{
-    background: black;
-    border-color:yellow;
-    color:yellow;
+    background: black;  
 }
 
 .navButton:focus{

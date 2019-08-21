@@ -10,11 +10,9 @@ body {
     font-family: "Star Jedi Regular";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
-    url("https://wallpaperaccess.com/full/11814.jpg") no-repeat center center fixed;
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("https://wallpaperaccess.com/full/11814.jpg") no-repeat center center fixed;
     background-size: cover;
     color: #333;
-
 }
 
 code {

@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
-import SelectList from '../components/SelectList';
-import InfoCard from '../components/InfoCard';
+import React, {Component} from 'react';
 import Header from './Header'
 import Main from './Main'
 import Footer from './Footer'
-
 
 class App extends Component {
     constructor() {
         super()
         this.state = {
-            categorySelect: '',
+            categoryUrl: '',
+            categoryList: [],
             itemSelect: '',
 
             selectList: {},
@@ -20,11 +18,8 @@ class App extends Component {
 
     }
 
-    // handler for when user selects category via nav button
-    // app -> header -> navlinks -> button
-    onCategorySelect = name => {
-        this.setState({categorySelect: name});
-        // always displays previous state; because async? need to fix or no?
+    handleCategorySelect = url => {
+        this.setState({ categoryUrl: url }); //async, may not be instant
     }
 
     // once the page renders
@@ -34,30 +29,29 @@ class App extends Component {
 
     // after state is set
     async componentDidUpdate() {
-                console.log(this.state.categorySelect)
-                const resp = await fetch(this.state.categorySelect)
-                const itemList = await resp.json()
-                console.log(itemList)
+        console.log(this.state.categoryUrl)
+        const resp = await fetch(this.state.categoryUrl)
+        const itemList = await resp.json()
+        console.log(itemList)
+        console.log(itemList.results[0].name || itemList.results[0].title)
     }
 
     render() {
 
-        const {itemSelect, categorySelect, test} = this.state;
+        const {itemSelect, categoryUrl, test} = this.state;
 
         return (
-            <div className="App">
-                {/* pass the onCategorySelect handler function 
-                down thru header to button */}
-                <Header
-                    catSelect={this.onCategorySelect}
-                />
+            <div>
+
+                <Header catSelect={this.handleCategorySelect}/>
 
                 <Main
-                    displayCategory={categorySelect}
+                    displayCategory={categoryUrl}
+                    
                     displayItem={test} // change this to itemSelect
                 />
 
-                <Footer />
+                <Footer/>
             </div>
         );
     }
