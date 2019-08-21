@@ -2,9 +2,9 @@
 
 categoryUrl: 'urlString' - this is used to do API fetch. it gets set via handler function in App when a Button component (App -> Header -> NavLinks -> Button) is clicked
 
-itemList: [{item1}, {item2}, etc.] - this is the data that is returned from the API fetch. It should be set immediately following setState(categoryUrl) when the Button component is clicked. It should be used to render the ItemList component with <li> elements (App -> Main -> ItemList).
+itemList: [{item1}, {item2}, etc.] - this is the data that is returned from the API fetch. It should be set immediately following setState(categoryUrl) when the Button component is clicked. It should be used to render the ItemList component with `<li>` elements (App -> Main -> ItemList).
 
-selectedItem: {item} - this is an item from inside of itemList. it gets set via handler function in App when the user clicks on a <li> in the ItemList component
+selectedItem: {item} - this is an item from inside of itemList. it gets set via handler function in App when the user clicks on a `<li>` in the ItemList component
 
 ## Problem 1 - How to setState(itemList)?
 
