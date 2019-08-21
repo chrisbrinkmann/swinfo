@@ -5,7 +5,9 @@ const Button = ({ name, catSelect }) => {
     return (
         <button
             className="navButton"
-            onClick={() => catSelect(name)}
+            onClick = {
+                () => catSelect(`https://swapi.co/api/${name}/`)
+            }
         >
             {name}
         </button>

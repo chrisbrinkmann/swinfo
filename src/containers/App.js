@@ -5,6 +5,7 @@ import Header from './Header'
 import Main from './Main'
 import Footer from './Footer'
 
+
 class App extends Component {
     constructor() {
         super()
@@ -22,16 +23,21 @@ class App extends Component {
     // handler for when user selects category via nav button
     // app -> header -> navlinks -> button
     onCategorySelect = name => {
-        this.setState({ categorySelect: name }); //may need to change this
-        console.log(this.state.categorySelect)
+        this.setState({categorySelect: name});
+        // always displays previous state; because async? need to fix or no?
     }
 
-    // once the page renders, fetch the data from swapi.co
+    // once the page renders
     async componentDidMount() {
-        const resp = await fetch("https://swapi.co/api/people/2/")
-        const person1 = await resp.json()
-        console.log(person1)
-        this.setState({test: person1})
+
+    }
+
+    // after state is set
+    async componentDidUpdate() {
+                console.log(this.state.categorySelect)
+                const resp = await fetch(this.state.categorySelect)
+                const itemList = await resp.json()
+                console.log(itemList)
     }
 
     render() {
@@ -40,7 +46,6 @@ class App extends Component {
 
         return (
             <div className="App">
-
                 {/* pass the onCategorySelect handler function 
                 down thru header to button */}
                 <Header
@@ -53,7 +58,6 @@ class App extends Component {
                 />
 
                 <Footer />
-
             </div>
         );
     }

@@ -1,6 +1,6 @@
 header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 40vh;
     align-items: center;
     justify-content: center;
@@ -8,7 +8,7 @@ header {
 }
 
 #pageLogo {
-    font-size:200%;
+    font-size:3em;
     display: inline-block;
     color: yellow;
     padding:1rem;
@@ -19,6 +19,7 @@ header {
         display:block;
         width:100%;
         margin: 0 auto;
+        text-align: center;
     }
     header {
         flex-direction: column;

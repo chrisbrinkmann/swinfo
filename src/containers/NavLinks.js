@@ -7,19 +7,19 @@ const NavLinks = ( { catSelect }) => {
         <nav>
 
             <Button
-                name={`Films`}
+                name={`films`}
                 catSelect={catSelect}
             />
             <Button
-                name={`People`}
+                name={`people`}
                 catSelect={catSelect}
             />
             <Button
-                name={`Planets`}
+                name={`planets`}
                 catSelect={catSelect}
             />
             <Button
-                name={`Species`}
+                name={`species`}
                 catSelect={catSelect}
             />
             <Button
@@ -27,7 +27,7 @@ const NavLinks = ( { catSelect }) => {
                 catSelect={catSelect}
             />
             <Button
-                name={`Starships`}
+                name={`starships`}
                 catSelect={catSelect}
             />
 

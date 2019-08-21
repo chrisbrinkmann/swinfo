@@ -8,7 +8,7 @@
 }
 
 .navButton:hover{
-    background: turquoise;
+    background: black;
     border-color:yellow;
     color:yellow;
 }
