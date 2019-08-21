@@ -2,33 +2,33 @@ import React from 'react';
 import Button from '../components/Button'
 import '../styles/NavLinks.css'
 
-const NavLinks = ( { catSelect }) => {
+const NavLinks = ({ handleCategorySelect }) => {
     return (
         <nav>
 
             <Button
                 name={`films`}
-                catSelect={catSelect}
+                handleCategorySelect={handleCategorySelect}
             />
             <Button
                 name={`people`}
-                catSelect={catSelect}
+                handleCategorySelect={handleCategorySelect}
             />
             <Button
                 name={`planets`}
-                catSelect={catSelect}
+                handleCategorySelect={handleCategorySelect}
             />
             <Button
                 name={`species`}
-                catSelect={catSelect}
+                handleCategorySelect={handleCategorySelect}
             />
             <Button
                 name={`vehicles`}
-                catSelect={catSelect}
+                handleCategorySelect={handleCategorySelect}
             />
             <Button
                 name={`starships`}
-                catSelect={catSelect}
+                handleCategorySelect={handleCategorySelect}
             />
 
         </nav>

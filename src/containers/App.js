@@ -1,57 +1,49 @@
 import React, {Component} from 'react';
 import Header from './Header'
 import Main from './Main'
-import Footer from './Footer'
 
 class App extends Component {
     constructor() {
         super()
         this.state = {
             categoryUrl: '',
-            categoryList: [],
-            itemSelect: '',
-
-            selectList: {},
-            displaySubject: {},
-            test: {}
+            itemList: [],
+            selectedItem: {}
         }
 
     }
 
+    // onClick handler called from Button.js
     handleCategorySelect = url => {
-        this.setState({ categoryUrl: url }); //async, may not be instant
+        this.setState({ categoryUrl: url });
     }
 
-    // once the page renders
-    async componentDidMount() {
-
+    // onClick handler called from ItemList.js
+    handleItemSelect = item => {
+        this.setState({ selectedItem: item });
     }
 
-    // after state is set
     async componentDidUpdate() {
-        console.log(this.state.categoryUrl)
         const resp = await fetch(this.state.categoryUrl)
-        const itemList = await resp.json()
-        console.log(itemList)
-        console.log(itemList.results[0].name || itemList.results[0].title)
+        const data = await resp.json()
+        console.log(data)
     }
 
     render() {
 
-        const {itemSelect, categoryUrl, test} = this.state;
+        const { itemList, selectedItem } = this.state;
 
         return (
             <div>
-
-                <Header catSelect={this.handleCategorySelect}/>
+                <Header handleCategorySelect={this.handleCategorySelect}/>
 
                 <Main
-                    displayCategory={categoryUrl}
+                    itemList={itemList}
                     
-                    displayItem={test} // change this to itemSelect
-                />
+                    selectedItem={selectedItem}
 
-                <Footer/>
+                    handleItemSelect={this.handleItemSelect}
+                />
             </div>
         );
     }

@@ -1,12 +1,12 @@
 import React from 'react';
 import '../styles/Button.css'
 
-const Button = ({ name, catSelect }) => {
+const Button = ({ name, handleCategorySelect }) => {
     return (
         <button
             className="navButton"
             onClick = {
-                () => catSelect(`https://swapi.co/api/${name}/`)
+                () => handleCategorySelect(`https://swapi.co/api/${name}/`)
             }
         >
             {name}

@@ -7,10 +7,10 @@
     background: transparent;
 }
 
-.navButton:hover{
-    background: black;  
+.navButton:hover {
+    background-color: rgba(64, 200, 200, 0.4);
 }
 
-.navButton:focus{
-    outline:0;
+.navButton:focus {
+    outline: 0;
 }

@@ -1,0 +1,39 @@
+.itemList {
+    background-color: rgba(64, 200, 200, 0.4);
+    color: turquoise;
+    width: 100%;
+    margin: 1rem;
+    padding: 0;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    display: block
+}
+
+ul {
+    list-style-type: none;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    border: 1px solid turquoise;
+    border-radius: 1rem;
+}
+
+ul li {
+    padding: 0.5rem 1rem;
+    border-radius:1rem;
+}
+
+ul:first-child {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+ul:last-child {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+li:hover {
+    background-color: rgba(64, 200, 200, 0.8);
+    cursor: pointer;
+}

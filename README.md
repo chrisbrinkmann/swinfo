@@ -1,3 +1,13 @@
+
+## Star Wars Info App - About
+
+This app displays info about Star Wars films, characters, and other lore from the Star Wars fictional universe.
+
+### Design Goals
+
+The goal of making this app was to use React to create a dynamic website that pulls data from a remote API (https://swapi.co) and dynamically renders page content based on what categories or items the user clicks.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -1,22 +1,23 @@
 import React from 'react';
-import SelectList from '../components/SelectList';
+import ItemList from '../components/ItemList';
 import InfoCard from '../components/InfoCard';
 
-
-// so instead of passing props and then calling props.subject
-// we can just destructure props in the arg like this:
-const Main = ({ displayCategory, displayItem }) => {
+const Main = ({ itemList, selectedItem, handleItemSelect }) => {
+    
+    
+    
     return (
         <main className="container-fluid row">
            
                 <div className="col-md-6">
-                    <SelectList
-                        category={displayCategory}
+                    <ItemList
+                        itemList={itemList}
+                        handleItemSelect={handleItemSelect}
                     />
                 </div>
                 <div className="col-md-6">
                     <InfoCard
-                        subject={displayItem}
+                        selectedItem={selectedItem}
                     />
                 </div>
             
