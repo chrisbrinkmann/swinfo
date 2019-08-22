@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/swinfo/static/css/main.4f921ba0.chunk.css",
+    "main.js": "/swinfo/static/js/main.dccf6abe.chunk.js",
+    "main.js.map": "/swinfo/static/js/main.dccf6abe.chunk.js.map",
+    "runtime~main.js": "/swinfo/static/js/runtime~main.4edbca43.js",
+    "runtime~main.js.map": "/swinfo/static/js/runtime~main.4edbca43.js.map",
+    "static/css/2.31dafeb2.chunk.css": "/swinfo/static/css/2.31dafeb2.chunk.css",
+    "static/js/2.ef7fc4a3.chunk.js": "/swinfo/static/js/2.ef7fc4a3.chunk.js",
+    "static/js/2.ef7fc4a3.chunk.js.map": "/swinfo/static/js/2.ef7fc4a3.chunk.js.map",
+    "index.html": "/swinfo/index.html",
+    "precache-manifest.72fa857d2f45961b32bd0a6232c6a888.js": "/swinfo/precache-manifest.72fa857d2f45961b32bd0a6232c6a888.js",
+    "service-worker.js": "/swinfo/service-worker.js",
+    "static/css/2.31dafeb2.chunk.css.map": "/swinfo/static/css/2.31dafeb2.chunk.css.map",
+    "static/css/main.4f921ba0.chunk.css.map": "/swinfo/static/css/main.4f921ba0.chunk.css.map",
+    "static/media/InfoCard.css": "/swinfo/static/media/Orbitron-Regular.d5bf04d5.ttf",
+    "static/media/index.css": "/swinfo/static/media/Starjedi.5c345b90.woff"
+  }
+}
