@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 import Header from './Header'
 import Main from './Main'
 
@@ -6,32 +6,36 @@ class App extends Component {
     constructor() {
         super()
         this.state = {
-            categoryUrl: '',
             itemList: [],
             selectedItem: {}
         }
 
+        this.handleCategorySelect = this.handleCategorySelect.bind(this)
+        this.handleItemSelect = this.handleItemSelect.bind(this)
     }
 
     // onClick handler called from Button.js
-    handleCategorySelect = url => {
-        this.setState({ categoryUrl: url });
+    async handleCategorySelect(url) {
+        try {
+            const resp = await fetch(url)
+            const data = await resp.json()
+            this.setState({ itemList: data.results })
+        } catch (err) {
+            console.log('Big error', err)
+        }
     }
 
     // onClick handler called from ItemList.js
     handleItemSelect = item => {
-        this.setState({ selectedItem: item });
+        this.setState({ selectedItem: item })
     }
 
     async componentDidUpdate() {
-        const resp = await fetch(this.state.categoryUrl)
-        const data = await resp.json()
-        console.log(data)
     }
 
     render() {
 
-        const { itemList, selectedItem } = this.state;
+        const { itemList, selectedItem } = this.state
 
         return (
             <div>

@@ -12,13 +12,13 @@ const ItemList = ({ itemList, handleItemSelect }) => {
         <div className="itemList">
             <ul>
                 {
-                    arr.map((item, index) => {
+                    itemList.map((item, index) => {
                         return (
                             <li
                                 key={index}
                                 onClick={() => handleItemSelect(item)}
                             >
-                                {item}
+                                {item.name || item.title}
                             </li>
                         )   
                     })
