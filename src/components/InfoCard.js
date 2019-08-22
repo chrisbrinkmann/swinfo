@@ -13,7 +13,7 @@ const InfoCard = ({ selectedItem }) => {
     (
         <div className='shadow-5 infoCard'>
             <img alt='robot' src={`https://robohash.org/1?100x100`} />
-                {       
+            {       
                     itemInfo.map((entry, index) => {
                         return (
                             <div

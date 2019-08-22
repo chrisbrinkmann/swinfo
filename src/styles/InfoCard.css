@@ -15,4 +15,5 @@
     text-align: center;
     display: block;
     font-family: 'orbitron', sans-serif;
+    overflow-wrap: break-word;
 }
