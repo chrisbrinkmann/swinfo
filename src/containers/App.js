@@ -31,6 +31,7 @@ class App extends Component {
     }
 
     async componentDidUpdate() {
+        console.log(this.state.selectedItem)
     }
 
     render() {

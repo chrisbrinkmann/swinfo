@@ -4,8 +4,9 @@
     width: 100%;
     margin: 1rem;
     padding: 1rem;
+    border: 1px solid turquoise;
     border-radius: 1rem;
     box-sizing: border-box;
     text-align: center;
-    display:block
+    display: block
 }

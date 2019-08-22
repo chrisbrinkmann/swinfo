@@ -3,12 +3,10 @@ import '../styles/ItemList.css'
 
 const ItemList = ({ itemList, handleItemSelect }) => {
 
-    // arr is for demo only; replace with itemList
-    let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8]
-    
+    return !itemList.length ?
+        <div></div> :
 
-    return (
-        
+        (
         <div className="itemList">
             <ul>
                 {
@@ -18,7 +16,7 @@ const ItemList = ({ itemList, handleItemSelect }) => {
                                 key={index}
                                 onClick={() => handleItemSelect(item)}
                             >
-                                {item.name || item.title}
+                                {item.title || item.name.toLowerCase()}
                             </li>
                         )   
                     })

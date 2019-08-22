@@ -3,13 +3,27 @@ import '../styles/InfoCard.css'
 
 const InfoCard = ({ selectedItem }) => {
 
-    return (
-        <div className='grow shadow-5 infoCard'>
-            <img alt='robot' src={`https://robohash.org/1?200x200`} />
-            <div>
+    const itemInfo = Object.entries(selectedItem)
 
 
-            </div>
+    return Object.entries(selectedItem).length === 0 ?
+    
+        <div></div> :
+
+    (
+        <div className='shadow-5 infoCard'>
+            <img alt='robot' src={`https://robohash.org/1?100x100`} />
+                {       
+                    itemInfo.map((entry, index) => {
+                        return (
+                            <div
+                                key={index}
+                            >
+                                {entry[0]}: {entry[1]}
+                            </div>
+                        )
+                })       
+            }
         </div>
     )
 }
