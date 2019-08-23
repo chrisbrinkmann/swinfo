@@ -7,7 +7,7 @@
     border: 1px solid turquoise;
     border-radius: 1rem;
     box-sizing: border-box;
-    display: block
+    display: block;
 }
 
 .loading {
@@ -19,7 +19,6 @@ ul {
     text-align: left;
     padding: 0;
     margin: 0;
-    
 }
 
 ul li {
@@ -40,4 +39,11 @@ ul:last-child {
 li:hover {
     background-color: rgba(64, 200, 200, 0.8);
     cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+    .itemList {
+        max-height: 40vh;
+        overflow: auto;
+    }
 }
