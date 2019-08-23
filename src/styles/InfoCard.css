@@ -17,3 +17,8 @@
     font-family: 'orbitron', sans-serif;
     overflow-wrap: break-word;
 }
+
+.infoKey {
+    font-weight: bold;
+    text-transform: capitalize;
+}

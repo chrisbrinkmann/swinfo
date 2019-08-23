@@ -15,10 +15,11 @@ const InfoCard = ({ selectedItem }) => {
                 <img alt='robot' src={`https://robohash.org/${Math.random()}?100x100`} />
             {       
                     itemInfo
-                        // filter removes entries that are links/arrays/metadata for readability
+                        // filter removes entries that are arrays/metadata for readability
                         .filter(elem =>
-                            !elem[1].includes('https') &&
                             !Array.isArray(elem[1]) &&
+                            elem[0] !== 'url' &&
+                            elem[0] !== 'homeworld' &&
                             elem[0] !== 'created' &&
                             elem[0] !== 'edited')
                         // render the remaining entries in the card
@@ -27,7 +28,7 @@ const InfoCard = ({ selectedItem }) => {
                             <div
                                 key={index}
                             >
-                                {elem[0]}: {elem[1]}
+                            <span className='infoKey'>{elem[0]}:</span> {elem[1]}
                             </div>
                         )
                 })       
