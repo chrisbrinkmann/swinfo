@@ -12,7 +12,7 @@ const InfoCard = ({ selectedItem }) => {
     (
             <div className='shadow-5 infoCard'>
                 {/* random robot image placeholder */}
-                <img alt='robot' src={`https://robohash.org/${Math.random()}?100x100`} />
+                <img alt='robot' src={`https://robohash.org/${itemInfo[0][1]}?100x100`} />
             {       
                     itemInfo
                         // filter removes entries that are arrays/metadata for readability

@@ -1,12 +1,16 @@
 import React from 'react';
 import '../styles/ItemList.css'
 
-const ItemList = ({ itemList, handleItemSelect }) => {
+const ItemList = ({ itemList, handleItemSelect, isLoading }) => {
 
-    return !itemList.length ?
+    return isLoading ?
+        <div className="itemList loading">Loading...</div> :
+
+        // default display nothing
+        !itemList.length ?
         <div></div> :
-
-        (
+        
+        // display itemlist once it has items from fetch
         <div className="itemList">
             <ul>
                 {
@@ -23,8 +27,6 @@ const ItemList = ({ itemList, handleItemSelect }) => {
                 }
             </ul>
         </div>
-    )
-
 }
 
 export default ItemList;

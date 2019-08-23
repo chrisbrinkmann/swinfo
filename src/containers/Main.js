@@ -2,7 +2,7 @@ import React from 'react';
 import ItemList from '../components/ItemList';
 import InfoCard from '../components/InfoCard';
 
-const Main = ({ itemList, selectedItem, handleItemSelect }) => {
+const Main = ({ itemList, selectedItem, handleItemSelect, isLoading }) => {
     
     
     
@@ -13,6 +13,7 @@ const Main = ({ itemList, selectedItem, handleItemSelect }) => {
                     <ItemList
                         itemList={itemList}
                         handleItemSelect={handleItemSelect}
+                        isLoading={isLoading}
                     />
                 </div>
                 <div className="col-md-6">

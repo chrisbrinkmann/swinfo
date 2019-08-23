@@ -16,6 +16,8 @@
     display: block;
     font-family: 'orbitron', sans-serif;
     overflow-wrap: break-word;
+    position: sticky;
+    top:1rem;
 }
 
 .infoKey {

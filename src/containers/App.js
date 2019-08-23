@@ -7,7 +7,8 @@ class App extends Component {
         super()
         this.state = {
             itemList: [],
-            selectedItem: {}
+            selectedItem: {},
+            isLoading: false
         }
 
         this.handleCategorySelect = this.handleCategorySelect.bind(this)
@@ -16,27 +17,44 @@ class App extends Component {
 
     // onClick handler called from Button.js
     async handleCategorySelect(url) {
+        this.setState({ isLoading: true })
+        
         try {
-            const resp = await fetch(url)
-            const data = await resp.json()
-            this.setState({ itemList: data.results })
+            let dataList = []
+
+            // cache the first page of data from the API
+            let resp = await fetch(url)
+            let data = await resp.json()
+            dataList = dataList.concat(data.results)
+
+            // cache the rest of the pages if there are more
+            while (data.next !== null) {
+                resp = await fetch(data.next)
+                data = await resp.json()
+                dataList = dataList.concat(data.results)
+            }
+
+            this.setState({ itemList: dataList })
         } catch (err) {
             console.log('Big error', err)
         }
+
+        this.setState({ isLoading: false })
     }
 
     // onClick handler called from ItemList.js
     handleItemSelect = item => {
         this.setState({ selectedItem: item })
     }
-    
+
     async componentDidUpdate() {
+        console.log(this.state.itemList)
         console.log(this.state.selectedItem)
     }
 
     render() {
 
-        const { itemList, selectedItem } = this.state
+        const { itemList, selectedItem, isLoading } = this.state
 
         return (
             <div>
@@ -44,6 +62,8 @@ class App extends Component {
 
                 <Main
                     itemList={itemList}
+
+                    isLoading={isLoading}
                     
                     selectedItem={selectedItem}
 
