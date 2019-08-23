@@ -41,9 +41,9 @@ li:hover {
     cursor: pointer;
 }
 
-@media screen and (max-width: 700px) {
+/* @media screen and (max-width: 700px) {
     .itemList {
         max-height: 40vh;
         overflow: auto;
-    }
-}
+    } 
+}*/

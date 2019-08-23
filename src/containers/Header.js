@@ -5,7 +5,7 @@ import '../styles/Header.css'
 const Header = ({ handleCategorySelect }) => {
     return (
         <header className="App-header">
-            <h1 id="pageLogo">@ info</h1>
+            <h1 id="pageLogo">@ info.</h1>
 
             <NavLinks
                 handleCategorySelect={handleCategorySelect}
