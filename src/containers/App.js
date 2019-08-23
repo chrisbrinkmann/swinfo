@@ -18,6 +18,7 @@ class App extends Component {
     // onClick handler called from Button.js
     async handleCategorySelect(url) {
         this.setState({ isLoading: true })
+        this.setState({ selectedItem: {} })
         
         try {
             let dataList = []
@@ -35,6 +36,7 @@ class App extends Component {
             }
 
             this.setState({ itemList: dataList })
+            
         } catch (err) {
             console.log('Big error', err)
         }
