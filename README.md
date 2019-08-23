@@ -7,8 +7,16 @@ This app displays info about Star Wars films, characters, and other lore from th
 
 The goal of making this app was to use React to create a dynamic website that pulls data from a remote API (https://swapi.co) and dynamically renders page content based on what categories or items the user clicks.
 
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+### Additional Features - Not Yet Implemented
+1. fetch all pages of category data from swapi.co. Currently only the first page is fetched. The response object does have a link to the next page, so it should be doable with something like (while data.next !== null, fetch data.next)
+
+2. Add images from another API or source. swapi.co does not have images. This would have to be done in App.handleItemSelect. Also would need to remove the filter in InfoCard for entries containing 'https'.
+
+3. InfoCard should show the name/title of entries where the API currently just returns a link/array of links to another API page (currently these entries are just filtered out to make the data look cleaner). This could be tricky... need to do a new fetch for each link in the response object value and replace it with the name||title from the new fetch.
+
+4. Add a 'loading...' text/spinner while waiting for the itemList fetch response. How can I check waiting for response? (component lifecycle method?)
 
 ## Available Scripts
 

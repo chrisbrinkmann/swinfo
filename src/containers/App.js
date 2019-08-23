@@ -29,7 +29,7 @@ class App extends Component {
     handleItemSelect = item => {
         this.setState({ selectedItem: item })
     }
-
+    
     async componentDidUpdate() {
         console.log(this.state.selectedItem)
     }

@@ -5,16 +5,40 @@
     src: local('Star Jedi Regular'), url('Starjedi.woff') format('woff');
 }
 
+html {
+    height: 100vh;
+    min-height: 100%;
+}
+
 body {
-    margin: 20px;
+    margin: 1rem;
     font-family: "star jedi regular";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("https://wallpaperaccess.com/full/11814.jpg") no-repeat center center fixed;
+    /* background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("https://wallpaperaccess.com/full/11814.jpg") no-repeat center center fixed; */
+    /* background-size: cover;
+    -webkit-background-size: cover; */
+}
+
+body:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("https://wallpaperaccess.com/full/11814.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    color: #333;
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+@media screen and (max-width: 700px) {
+    body {}
 }

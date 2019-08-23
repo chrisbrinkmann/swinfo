@@ -5,21 +5,29 @@ const InfoCard = ({ selectedItem }) => {
 
     const itemInfo = Object.entries(selectedItem)
 
-
-    return Object.entries(selectedItem).length === 0 ?
+    return itemInfo.length === 0 ?
     
         <div></div> :
 
     (
-        <div className='shadow-5 infoCard'>
-            <img alt='robot' src={`https://robohash.org/1?100x100`} />
+            <div className='shadow-5 infoCard'>
+                {/* random robot image placeholder */}
+                <img alt='robot' src={`https://robohash.org/${Math.random()}?100x100`} />
             {       
-                    itemInfo.map((entry, index) => {
+                    itemInfo
+                        // filter removes entries that are links/arrays/metadata for readability
+                        .filter(elem =>
+                            !elem[1].includes('https') &&
+                            !Array.isArray(elem[1]) &&
+                            elem[0] !== 'created' &&
+                            elem[0] !== 'edited')
+                        // render the remaining entries in the card
+                        .map((elem, index) => {
                         return (
                             <div
                                 key={index}
                             >
-                                {entry[0]}: {entry[1]}
+                                {elem[0]}: {elem[1]}
                             </div>
                         )
                 })       
