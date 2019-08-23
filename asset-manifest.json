@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/swinfo/static/css/main.a93ff97d.chunk.css",
+    "main.css": "/swinfo/static/css/main.52af0f76.chunk.css",
     "main.js": "/swinfo/static/js/main.e8a31f4a.chunk.js",
     "main.js.map": "/swinfo/static/js/main.e8a31f4a.chunk.js.map",
     "runtime~main.js": "/swinfo/static/js/runtime~main.4edbca43.js",
@@ -9,10 +9,10 @@
     "static/js/2.ef7fc4a3.chunk.js": "/swinfo/static/js/2.ef7fc4a3.chunk.js",
     "static/js/2.ef7fc4a3.chunk.js.map": "/swinfo/static/js/2.ef7fc4a3.chunk.js.map",
     "index.html": "/swinfo/index.html",
-    "precache-manifest.620e542cfb5ef70fa8e434e4b4c2dea6.js": "/swinfo/precache-manifest.620e542cfb5ef70fa8e434e4b4c2dea6.js",
+    "precache-manifest.bead76977af424d78feaaaca50e9b744.js": "/swinfo/precache-manifest.bead76977af424d78feaaaca50e9b744.js",
     "service-worker.js": "/swinfo/service-worker.js",
     "static/css/2.31dafeb2.chunk.css.map": "/swinfo/static/css/2.31dafeb2.chunk.css.map",
-    "static/css/main.a93ff97d.chunk.css.map": "/swinfo/static/css/main.a93ff97d.chunk.css.map",
+    "static/css/main.52af0f76.chunk.css.map": "/swinfo/static/css/main.52af0f76.chunk.css.map",
     "static/media/InfoCard.css": "/swinfo/static/media/Orbitron-Regular.d5bf04d5.ttf",
     "static/media/index.css": "/swinfo/static/media/Starjedi.5c345b90.woff"
   }
