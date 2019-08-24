@@ -26,24 +26,7 @@ ul li {
     border-radius: 1rem;
 }
 
-ul:first-child {
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-}
-
-ul:last-child {
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-}
-
 li:hover {
     background-color: rgba(64, 200, 200, 0.8);
     cursor: pointer;
 }
-
-/* @media screen and (max-width: 700px) {
-    .itemList {
-        max-height: 40vh;
-        overflow: auto;
-    } 
-}*/

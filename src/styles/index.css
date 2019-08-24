@@ -15,9 +15,6 @@ body {
     font-family: "star jedi regular";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("https://wallpaperaccess.com/full/11814.jpg") no-repeat center center fixed; */
-    /* background-size: cover;
-    -webkit-background-size: cover; */
 }
 
 body:after {
@@ -37,8 +34,4 @@ body:after {
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
-@media screen and (max-width: 700px) {
-    body {}
 }

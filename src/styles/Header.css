@@ -1,7 +1,7 @@
 header {
     display: flex;
     flex-direction: column;
-    height: 40vh;
+    height: 30vh;
     align-items: center;
     justify-content: center;
     padding:1rem;
@@ -20,9 +20,6 @@ header {
         width:100%;
         margin: 0 auto;
         text-align: center;
-    }
-    header {
-        flex-direction: column;
     }
 }
 
