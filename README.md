@@ -11,6 +11,6 @@ The goal of making this app was to use React to create a website that pulls data
 
 1. Add images from another API or source. swapi.co does not have images. This would have to be done in App.handleItemSelect.
 
-2. InfoCard should show the name/title of entries where the API currently just returns a link/array of links to another API page (currently these entries are just filtered out to make the data look cleaner). This could be tricky... need to do a new fetch for each link in the response object value and replace it with the name/title from the new fetch.
+2. InfoCard should show the name/title of entries where the API currently just returns a link/array of links to another API page (currently these entries are just filtered out to make the data look cleaner).
 
 3. The ItemList is too long on mobile. The user has to scroll very far down to see the InfoCard. It is OK on desktop, because the InfoCard is sticky position in the 2nd column. On mobile the columns are stacked. On mobile the ItemList should collapse, or maybe have pagination.
