@@ -6,7 +6,7 @@ const Button = ({ name, handleCategorySelect }) => {
         <button
             className="navButton"
             onClick = {
-                () => handleCategorySelect(`https://swapi.co/api/${name}/`)
+                () => handleCategorySelect(`https://swapi.dev/api/${name}/`)
             }
         >
             {name}
