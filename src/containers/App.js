@@ -30,7 +30,12 @@ class App extends Component {
 
       // cache the rest of the pages if there are more
       while (data.next !== null) {
-      resp = await fetch(data.next)
+
+      // for some reason their pagination urls in next use http
+      // just replace it with https until they fix it
+      let httpsNext = data.next.replace('http://', 'https://')
+
+      resp = await fetch(httpsNext)
       data = await resp.json()
       dataList = dataList.concat(data.results)
       }  
